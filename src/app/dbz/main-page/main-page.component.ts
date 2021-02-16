@@ -18,24 +18,11 @@ export class MainPageComponent {
   ];
 
   new: Character = {
-    name: '',
-    power: 0,
+    name: 'Maestro Roshi',
+    power: 1000,
   };
 
-  // changeName(event: any) {
-  //   console.log(event.target.value);
-  // }
-
-  add() {
-    if (this.new.name.trim().length === 0) {
-      return;
-    }
-    console.log(this.new);
-
-    this.characters.push(this.new);
-    this.new = {
-      name: '',
-      power: 0,
-    };
+  addNewCharacter(argument: Character) {
+    this.characters.push(argument);
   }
 }
